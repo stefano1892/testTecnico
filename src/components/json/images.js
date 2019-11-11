@@ -29,7 +29,7 @@ const Products = [
     {
         img: "https://images.theluxer.com/Fay_medias/elaborati/fashion/753x979/014874730441_02_02_753Wx979H.jpg",
         nome: "GIUBBOTTO REVERSIBILE - FAY ARCHIVE - BEIGE",
-        price: "89€",
+        price: "123€",
         disponibility: "Disponibile",
         SKU: "123456",
         textButton: "Scopri di più",

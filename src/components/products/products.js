@@ -1,20 +1,19 @@
 /* eslint-disable no-unused-expressions */
 import React, { Component, Fragment } from 'react'
-import Products from '../json/images.js'
 import {
     Card, CardImg, CardBody,
     CardTitle, CardSubtitle, Button
   } from 'reactstrap';
+import {Link} from 'react-router-dom'
 import { Row, Col } from 'reactstrap'
+import {getId} from '../actions/actions'
+import {connect} from 'react-redux'
 
 class ProductsList extends Component {
 
-  constructor(props){
-    super(props);
-
-    this.state = {
-      dataProducts: []
-    }
+  updateProductId = (id) => {
+    debugger
+    this.props.updateProductId(id)
   }
 
   render(){
@@ -22,7 +21,6 @@ class ProductsList extends Component {
       <Fragment>
         <Row md="12" style={{width: '100%', margin: 0, padding: 0}}>
           {this.props.products.map(item => {
-            console.log(item.nome)
             return(
               <Col md="3">
                   <Card>
@@ -30,7 +28,12 @@ class ProductsList extends Component {
                   <CardBody>
                     <CardTitle>{item.nome}</CardTitle>
                     <CardSubtitle>{item.price}</CardSubtitle>
-                    <Button>{item.textButton}</Button>
+                    <Button 
+                    tag={Link}
+                    to="/details"
+                    onClick={() => this.updateProductId(item.id)}>
+                      {item.textButton}
+                    </Button>
                   </CardBody>
                 </Card>
               </Col>
@@ -42,4 +45,8 @@ class ProductsList extends Component {
   }
 }
 
-export default ProductsList;
+const mapDispatchToProps = state => ({
+  updateProductId: getId
+})
+
+export default connect(mapDispatchToProps)(ProductsList);
