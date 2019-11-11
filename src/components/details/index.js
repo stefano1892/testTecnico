@@ -1,3 +1,4 @@
-import Details from './details'
+import { withRouter } from 'react-router-dom';
+import Details from './details';
 
-export default Details
+export default withRouter(Details);

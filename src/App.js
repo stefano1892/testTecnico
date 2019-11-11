@@ -4,7 +4,7 @@ import {BrowserRouter as Router , Route} from 'react-router-dom';
 import NavigationBar from './components/navigationBar/navigationBar'
 import HomeComponent from './components/homePage';
 import Details from './components/details';
-import {connect} from 'react-redux'
+// import {connect} from 'react-redux'
 
 class App extends Component {
   render(){
@@ -13,17 +13,16 @@ class App extends Component {
         <div>
             <NavigationBar/>
             <Route exact path="/" component={HomeComponent}/>
-            <Route path='/details' name="details" component={Details}/>
+            <Route path='/details/:id' name="details" component={Details}/>
         </div>
       </Router>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  productId: state.productId
-})
+// const mapStateToProps = state => ({
+//   productId: state.productId
+// })
 
-const mapDispatchToProps = state => ({})
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+// export default connect(null, null)(App);
+export default App;
