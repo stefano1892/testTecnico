@@ -28,16 +28,15 @@ class Details extends Component {
             price,
             disponibility,
             SKU,
-            descrizione,
-            id,
+            descrizione
         } = currentProduct;
 
         const {
-            getProductId
+            addElementToCart
         }= this.props
 
-        const addToCart = (id) => {
-            getProductId(id)
+        const addToCart = (currentProduct) => {
+            addElementToCart(currentProduct)
         }
 
         return(
@@ -90,7 +89,7 @@ class Details extends Component {
                         <Row>
                             <Push
                             id={"detailsButton"}
-                            onClick={() => addToCart(id)}
+                            onClick={() => addToCart(this.state.currentProduct)}
                             label={"Aggiungi al carrello"}/>
                         </Row>
                     </Col>

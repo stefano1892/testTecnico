@@ -10,6 +10,8 @@ class Push extends Component{
                 to={this.props.to}
                 onClick={this.props.onClick}
                 tag={this.props.tag}
+                className={this.props.className}
+                color={this.props.color}
             >
                 {this.props.label}
             </Button>

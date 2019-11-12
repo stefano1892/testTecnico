@@ -5,7 +5,6 @@ import NavigationBar from './components/navigationBar/navigationBar'
 import HomeComponent from './components/homePage';
 import CartComponent from './components/cart'
 import Details from './components/details';
-import {connect} from 'react-redux'
 
 class App extends Component {
   render(){
@@ -22,8 +21,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  productId: state.productId
-})
-
-export default connect(mapStateToProps, null)(App);
+export default App;

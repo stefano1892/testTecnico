@@ -1,1 +1,2 @@
-export const PRODUCT_ID = "PRODUCT_ID";
+export const ADD_ELEMENT = "ADD_ELEMENT";
+export const REMOVE_ELEMENT = "REMOVE_ELEMENT";

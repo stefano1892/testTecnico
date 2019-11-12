@@ -7,15 +7,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { createStore, combineReducers } from 'redux'
 import {Provider} from 'react-redux'
-import IdReducer from './store/reducers/reducers'
+import ArrayReducer from './store/reducers/reducers'
 
 const allReducers = combineReducers({
-    id: IdReducer
+    arrayCart: ArrayReducer
 });
 
 const store = createStore( 
     allReducers,
-    window.devToolsExtension && window.devToolsExtension()
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));

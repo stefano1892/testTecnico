@@ -2,11 +2,11 @@ import { withRouter } from 'react-router-dom';
 import Details from './details';
 import {connect} from 'react-redux'
 
-import {getId} from '../../store/actions/actions'
+import {addCartAction} from '../../store/actions/actions'
 
 
 const mapDispatchToProps= {
-    getProductId: getId
+    addElementToCart: addCartAction
 }
 
 export default connect(null, mapDispatchToProps)(withRouter(Details));
