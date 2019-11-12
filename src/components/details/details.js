@@ -1,18 +1,22 @@
 import React, { Component, Fragment } from 'react';
-import Products from '../json/images.js';
+import Products from '../data/data.js';
 import { Row, Col }  from 'reactstrap'
+import Push from '../button/button.js';
+
 
 class Details extends Component {
 
     state = {
-        currentProduct: null
+        currentProduct: null,
+        disabled: false
     }
 
     componentDidMount() {
         const { match: { params: { id } } } = this.props;
-        console.log(id);
+        
         this.setState({
-            currentProduct: Products.find(prod => prod.id === id)
+            currentProduct: Products.find(prod => prod.id === id),
+            currentId: id
         });
     }
 
@@ -25,13 +29,78 @@ class Details extends Component {
             price,
             disponibility,
             SKU,
-            textButton,
+            descrizione,
             id,
         } = currentProduct;
+
+        const {
+            getProductId
+        }= this.props
+
+        if (descrizione === "Non disponibile"){
+            this.setState({
+                disabled: true
+            })
+        }
+
+        const addToCart = (id) => {
+            getProductId(id)
+        }
+
         return(
             <Fragment>
-                <Row>
-                    
+                <Row style={{width: '100%'}}>
+                    <Col md="6">
+                        <img src={img} style={{width: '70%'}} alt=""/>
+                    </Col>
+                    <Col md="6">
+                        <Row style={{marginTop: '30%'}}>
+                            <Col md="3">
+                                <b>Prodotto:</b>
+                            </Col>
+                            <Col md="7">
+                                <b>{nome}</b>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md="3">
+                                <b>Prezzo:</b>
+                            </Col>
+                            <Col md="7">
+                                <b>{price}</b>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md="3">
+                                <b>SKU:</b>
+                            </Col>
+                            <Col md="7">
+                                <b>{SKU}</b>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md="3">
+                                <b>Descrizione:</b>
+                            </Col>
+                            <Col md="7">
+                                <b>{descrizione}</b>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md="3">
+                                <b>Disponibilità:</b>
+                            </Col>
+                            <Col md="7">
+                                <b>{disponibility}</b>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Push
+                            id={"detailsButton"}
+                            onClick={() => addToCart(id)}
+                            label={"Aggiungi al carrello"}/>
+                        </Row>
+                    </Col>
                 </Row>
             </Fragment>
         );

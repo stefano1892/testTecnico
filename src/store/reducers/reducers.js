@@ -1,12 +1,10 @@
 import { PRODUCT_ID } from '../constants'
 
-export default function IdReducer(state = '', action) {
-    switch(action.type){
+export default function IdReducer(state = '', {type, payload}) {
+    debugger
+    switch(type){
         case PRODUCT_ID:
-            return{
-                ...state,
-                id: action.payload.id
-            }
+            return payload.id
         default:
             return state
     }

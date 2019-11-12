@@ -2,10 +2,11 @@
 import React, { Component } from 'react'
 import {
     Card, CardImg, CardBody,
-    CardTitle, CardSubtitle, Button
+    CardTitle, CardSubtitle
   } from 'reactstrap';
 import {Link} from 'react-router-dom'
 import { Row, Col } from 'reactstrap'
+import Push from '../button/button'
 // import {getId} from '../actions/actions'
 // import {connect} from 'react-redux'
 
@@ -26,11 +27,11 @@ class ProductsList extends Component {
                   <CardBody>
                     <CardTitle>{item.nome}</CardTitle>
                     <CardSubtitle>{item.price}</CardSubtitle>
-                    <Button 
+                    <Push 
+                    id={"productsButton"}
                     tag={Link}
-                    to={`/details/${item.id}`}>
-                      {item.textButton}
-                    </Button>
+                    to={`/details/${item.id}`}
+                    label={item.textButton} />
                   </CardBody>
                 </Card>
               </Col>

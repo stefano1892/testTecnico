@@ -5,23 +5,21 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// import { createStore, combineReducers } from 'redux'
-// import {Provider} from 'react-redux'
-// import IdReducer from './components/reducers/reducers'
+import { createStore, combineReducers } from 'redux'
+import {Provider} from 'react-redux'
+import IdReducer from './store/reducers/reducers'
 
-// const allReducers = combineReducers({
-//     id: IdReducer
-// });
+const allReducers = combineReducers({
+    id: IdReducer
+});
 
-// const store = createStore( 
-//     allReducers,
-//     window.devToolsExtension && window.devToolsExtension()
-//     );
+const store = createStore( 
+    allReducers,
+    window.devToolsExtension && window.devToolsExtension()
+);
 
-const store = {};
+ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 
-// ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
-ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
