@@ -8,8 +8,14 @@ import {
   NavItem,
   NavLink
  } from 'reactstrap';
+import {Link} from 'react-router-dom'
+
+// import NotificationBadge from 'react-notification-badge';
+// import {Effect} from 'react-notification-badge';
 
 const NavigationBar = (props) => {
+
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -29,7 +35,11 @@ const NavigationBar = (props) => {
             </NavItem>
             <NavItem>
               <div>
-                <i className="fas fa-shopping-cart shoppingCart"></i>
+                <Link to='/cart'>
+                  <i className="fas fa-shopping-cart shoppingCart">
+                    {/*<NotificationBadge count={this.state.count} effect={Effect.SCALE}/>*/}
+                  </i>
+                </Link>
               </div>
             </NavItem>
           </Nav>

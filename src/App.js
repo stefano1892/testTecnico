@@ -3,6 +3,7 @@ import './App.css';
 import {BrowserRouter as Router , Route} from 'react-router-dom';
 import NavigationBar from './components/navigationBar/navigationBar'
 import HomeComponent from './components/homePage';
+import CartComponent from './components/cart'
 import Details from './components/details';
 import {connect} from 'react-redux'
 
@@ -14,6 +15,7 @@ class App extends Component {
             <NavigationBar/>
             <Route exact path="/" component={HomeComponent}/>
             <Route path='/details/:id' name="details" component={Details}/>
+            <Route path='/cart' component={CartComponent} />
         </div>
       </Router>
     );

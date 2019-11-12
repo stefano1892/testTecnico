@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-expressions */
 import React, { Component } from 'react'
 import {
     Card, CardImg, CardBody,
@@ -7,14 +6,7 @@ import {
 import {Link} from 'react-router-dom'
 import { Row, Col } from 'reactstrap'
 import Push from '../button/button'
-// import {getId} from '../actions/actions'
-// import {connect} from 'react-redux'
-
 class ProductsList extends Component {
-
-  // updateProductId = (id) => {
-  //   this.props.updateProductId(id)
-  // }
 
   render(){
     return(
@@ -42,9 +34,4 @@ class ProductsList extends Component {
   }
 }
 
-// const mapDispatchToProps = dispatch => ({
-//   updateProductId: _ => dispatch(getId)
-// })
-
-// export default connect(null, null)(ProductsList);
 export default ProductsList;

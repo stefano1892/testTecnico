@@ -8,7 +8,6 @@ class Details extends Component {
 
     state = {
         currentProduct: null,
-        disabled: false
     }
 
     componentDidMount() {
@@ -36,12 +35,6 @@ class Details extends Component {
         const {
             getProductId
         }= this.props
-
-        if (descrizione === "Non disponibile"){
-            this.setState({
-                disabled: true
-            })
-        }
 
         const addToCart = (id) => {
             getProductId(id)
