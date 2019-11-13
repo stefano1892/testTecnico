@@ -5,6 +5,7 @@ import NavigationBar from './components/navigationBar/navigationBar'
 import HomeComponent from './components/homePage';
 import CartComponent from './components/cart'
 import Details from './components/details';
+import SummaryComponent from './components/summary';
 
 class App extends Component {
   render(){
@@ -15,6 +16,7 @@ class App extends Component {
             <Route exact path="/" component={HomeComponent}/>
             <Route path='/details/:id' name="details" component={Details}/>
             <Route path='/cart' component={CartComponent} />
+            <Route path='/summary' component={SummaryComponent} />
         </div>
       </Router>
     );

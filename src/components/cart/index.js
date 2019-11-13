@@ -6,7 +6,7 @@ const mapStateToProps = state => ({
     arrayProducts: state.arrayCart.products,
 })
 
-const mapDispatchToProps = state => ({
+const mapDispatchToProps = ({
     deleteProduct: removeCartAction
 })
 

@@ -12,10 +12,10 @@ export default function ArrayReducer(state = initialState, action) {
                 products: [...state.products, action.payload]
             }
         case REMOVE_ELEMENT:
-            debugger
-            const newState = [...state.products.slice(0, action.payload), ...state.products.slice(action.payload + 1)]
-
-            return newState
+            return{
+                ...state,
+                products: state.products.filter(item => item.id !== action.payload)
+            }
         default:
             return state
     }

@@ -11,9 +11,9 @@ class ProductsList extends Component {
   render(){
     return(
         <Row md="12" style={{width: '100%', margin: 0, padding: 0}}>
-          {this.props.products.map(item => {
+          {this.props.products.map((item, i) => {
             return(
-              <Col md="3">
+              <Col md="3" key={i}>
                 <Card>
                   <CardImg top width="100%" src={item.img} alt="Card image cap" />
                   <CardBody>
