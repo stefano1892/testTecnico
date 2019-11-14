@@ -9,20 +9,30 @@ class CartComponent extends Component {
     totPrice = 0;
 
     componentWillMount(){
+        this.calculatePrice()
+        
+    }
+
+    calculatePrice() {
+        this.totPrice = 0
         this.props.arrayProducts.map(item => {
             this.totPrice += parseInt(item.price)
         })
         this.props.exportTotPrice(this.totPrice)
     }
 
+
     render(){
         const {
             arrayProducts,
-            deleteProduct
+            deleteProduct,
+            totPrice
         }= this.props
 
         const deleteProductFromList = id => {
             deleteProduct(id)
+            debugger
+            this.calculatePrice()
         }
         
         return(
@@ -46,7 +56,7 @@ class CartComponent extends Component {
                                     </Row>
                                     <Row>
                                         <Push
-                                        onClick={() => deleteProductFromList(item.id)} 
+                                        onClick={() => deleteProductFromList(i)} 
                                         label={"Rimuovi"}
                                         color={"danger"}/>
                                     </Row>
@@ -60,7 +70,7 @@ class CartComponent extends Component {
                         <Fragment>
                             <Col md="12">
                                 <Col md="6" id="price">
-                                    <b>Totale: {this.totPrice}</b>
+                                    <b>Totale: {totPrice}</b>
                                 </Col>
                                 <Push
                                     label="Procedi al pagamento"

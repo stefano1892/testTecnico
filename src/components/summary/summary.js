@@ -29,7 +29,7 @@ class SummaryComponent extends Component{
                 </Row>
                 <Row id="rowForm">
                     <Col md={{size:7, offset: 1}}>
-                        {/*<Form>
+                        <Form>
                             <FormGroup>
                                 <Label>Nome*</Label>
                                 <Input type="text" name="nome" id="nome" placeholder="es: Mario" />
@@ -63,7 +63,7 @@ class SummaryComponent extends Component{
                                 <Input type="text" name="Telefono" id="Telefono"/>
                             </FormGroup>
                             <Button>Submit</Button>
-                        </Form>*/}
+                        </Form>
                     </Col>
                 </Row>
             </Fragment>

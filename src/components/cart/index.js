@@ -5,6 +5,8 @@ import {totPrice} from '../../store/actions/actions'
 
 const mapStateToProps = state => ({
     arrayProducts: state.arrayCart.products,
+    totPrice: state.arrayCart.totPrice
+
 })
 
 const mapDispatchToProps = ({

@@ -89,6 +89,7 @@ class Details extends Component {
                         <Row>
                             <Push
                             id={"detailsButton"}
+                            disabled={disponibility == "Non disponibile"}
                             onClick={() => addToCart(this.state.currentProduct)}
                             label={"Aggiungi al carrello"}/>
                         </Row>
