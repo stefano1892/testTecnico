@@ -24,13 +24,6 @@ class CartComponent extends Component {
         const deleteProductFromList = id => {
             deleteProduct(id)
         }
-
-        /*const price = arrayProducts => {
-            arrayProducts.map(item => {
-                this.totPrice += item.price
-            })
-            return this.totPrice;
-        }*/
         
         return(
             <Fragment>

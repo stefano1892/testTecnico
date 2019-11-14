@@ -10,9 +10,12 @@ import {Provider} from 'react-redux'
 import ArrayReducer from './store/reducers/reducers'
 import PriceReducer from './store/reducers/priceReducer'
 
+import { reducer as formReducer } from 'redux-form'
+
 const allReducers = combineReducers({
     arrayCart: ArrayReducer,
-    totProducts: PriceReducer
+    totProducts: PriceReducer,
+    form: formReducer
 });
 
 const store = createStore( 

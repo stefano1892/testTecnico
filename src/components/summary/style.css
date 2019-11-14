@@ -1,0 +1,16 @@
+#headerRow{
+    height: 80px;
+    text-align: left;
+  line-height: 90px;
+  text-align: center;
+}
+
+#summaryLabel{
+    position: relative;
+    float: left
+}
+
+#totLabel{
+    position: relative; 
+    float: left
+}
