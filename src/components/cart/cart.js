@@ -6,8 +6,16 @@ import {Link} from 'react-router-dom'
 
 class CartComponent extends Component {
 
-    render(){
+    totPrice = 0;
 
+    componentWillMount(){
+        this.props.arrayProducts.map(item => {
+            this.totPrice += parseInt(item.price)
+        })
+        this.props.exportTotPrice(this.totPrice)
+    }
+
+    render(){
         const {
             arrayProducts,
             deleteProduct
@@ -16,6 +24,13 @@ class CartComponent extends Component {
         const deleteProductFromList = id => {
             deleteProduct(id)
         }
+
+        /*const price = arrayProducts => {
+            arrayProducts.map(item => {
+                this.totPrice += item.price
+            })
+            return this.totPrice;
+        }*/
         
         return(
             <Fragment>
@@ -46,21 +61,31 @@ class CartComponent extends Component {
                             </Row>
                         )
                     })
-                        
                 ) : ( "Il carrello è vuoto")}
-                <Row style={{width: '100%'}}>
+                <Row id="rowButtons">
                     {(arrayProducts.length !== 0) ? (
-                        <Push
-                            label="Procedi al pagamento"
-                            tag={Link}
-                            to="/summary"
-                        />
+                        <Fragment>
+                            <Col md="12">
+                                <Col md="6" id="price">
+                                    <b>Totale: {this.totPrice}</b>
+                                </Col>
+                                <Push
+                                    label="Procedi al pagamento"
+                                    tag={Link}
+                                    to="/summary"
+                                    id="paymentButton"
+                                />
+                            </Col>
+                        </Fragment>
                     ) : (
-                        <Push 
-                            label="Continua lo shopping"
-                            tag={Link}
-                            to="/"
-                        />
+                        <Col md="12">
+                            <Push 
+                                label="Continua lo shopping"
+                                tag={Link}
+                                to="/"
+                                id="shoppingButton"
+                            />
+                        </Col>
                     )}
                 </Row>
             </Fragment>

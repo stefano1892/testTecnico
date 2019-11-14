@@ -59,7 +59,7 @@ class Details extends Component {
                                 <b>Prezzo:</b>
                             </Col>
                             <Col md="7">
-                                <b>{price}</b>
+                                <b>{price}€</b>
                             </Col>
                         </Row>
                         <Row>

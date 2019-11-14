@@ -2,7 +2,7 @@ const Products = [
     {
         img: "https://images.theluxer.com/Fay_medias/elaborati/fashion/753x979/014874750441_02_02_753Wx979H.jpg",
         nome: "GIUBBOTTO REVERSIBILE - FAY ARCHIVE - BLU",
-        price: "€ 398,00",
+        price: "398,00",
         disponibility: "Disponibile",
         SKU: "123456",
         textButton: "Scopri di più",
@@ -12,7 +12,7 @@ const Products = [
     {
         img: "https://images.theluxer.com/Fay_medias/elaborati/fashion/753x979/014874760441_02_02_753Wx979H.jpg",
         nome: "GIUBBOTTO REVERSIBILE - FAY ARCHIVE - VERDE",
-        price: "€ 98,00",
+        price: "98,00",
         disponibility: "Non disponibile",
         SKU: "123456",
         textButton: "Scopri di più",
@@ -22,7 +22,7 @@ const Products = [
     {
         img: "https://images.theluxer.com/Fay_medias/elaborati/fashion/753x979/014874740441_02_02_753Wx979H.jpg",
         nome: "GIUBBOTTO REVERSIBILE - FAY ARCHIVE - ROSSO",
-        price: "89€",
+        price: "89",
         disponibility: "Disponibile",
         SKU: "123456",
         textButton: "Scopri di più",
@@ -32,7 +32,7 @@ const Products = [
     {
         img: "https://images.theluxer.com/Fay_medias/elaborati/fashion/753x979/014874730441_02_02_753Wx979H.jpg",
         nome: "GIUBBOTTO REVERSIBILE - FAY ARCHIVE - BEIGE",
-        price: "123€",
+        price: "123",
         disponibility: "Non disponibile",
         SKU: "123456",
         textButton: "Scopri di più",

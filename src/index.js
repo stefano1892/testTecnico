@@ -8,9 +8,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { createStore, combineReducers } from 'redux'
 import {Provider} from 'react-redux'
 import ArrayReducer from './store/reducers/reducers'
+import PriceReducer from './store/reducers/priceReducer'
 
 const allReducers = combineReducers({
-    arrayCart: ArrayReducer
+    arrayCart: ArrayReducer,
+    totProducts: PriceReducer
 });
 
 const store = createStore( 

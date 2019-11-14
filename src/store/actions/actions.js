@@ -1,4 +1,4 @@
-import {ADD_ELEMENT, REMOVE_ELEMENT} from '../constants'
+import {ADD_ELEMENT, REMOVE_ELEMENT, TOT_PRICE} from '../constants'
 
 export function addCartAction(newId) {
   return {
@@ -11,5 +11,12 @@ export function removeCartAction(id) {
   return {
     type: REMOVE_ELEMENT,
     payload: id
+  }
+}
+
+export function totPrice(price) {
+  return {
+    type: TOT_PRICE,
+    payload: price
   }
 }
