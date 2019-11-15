@@ -31,7 +31,6 @@ class CartComponent extends Component {
 
         const deleteProductFromList = id => {
             deleteProduct(id)
-            debugger
             this.calculatePrice()
         }
         
@@ -40,9 +39,9 @@ class CartComponent extends Component {
                 {(arrayProducts !== 0) ? (
                     arrayProducts.map((item, i) => {
                         return(
-                            <Row md="12" style={{width: '100%', marginTop: '20px'}} key={i}>
-                                <Col md="3" style={{textAlign: 'center'}}>
-                                    <img src={item.img} alt="" style={{width: '150px'}} />
+                            <Row md="12" id="cartProductsRow" key={i}>
+                                <Col md="3" id="colImgProd">
+                                    <img src={item.img} alt="" id="imgProg" />
                                 </Col>
                                 <Col md="9">
                                     <Row>

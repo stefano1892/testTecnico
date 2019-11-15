@@ -6,7 +6,7 @@ const Products = [
         disponibility: "Disponibile",
         SKU: "123456",
         textButton: "Scopri di più",
-        descrizione: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        descrizione: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         id: "0"
     },
     {
@@ -16,7 +16,7 @@ const Products = [
         disponibility: "Non disponibile",
         SKU: "123456",
         textButton: "Scopri di più",
-        descrizione: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        descrizione: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         id: "1"
     },
     {
@@ -26,7 +26,7 @@ const Products = [
         disponibility: "Disponibile",
         SKU: "123456",
         textButton: "Scopri di più",
-        descrizione: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        descrizione: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         id: "2"
     },
     {
@@ -36,7 +36,7 @@ const Products = [
         disponibility: "Non disponibile",
         SKU: "123456",
         textButton: "Scopri di più",
-        descrizione: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        descrizione: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         id: "3"
     }
 ]

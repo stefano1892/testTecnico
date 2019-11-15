@@ -6,11 +6,13 @@ import {
 import {Link} from 'react-router-dom'
 import { Row, Col } from 'reactstrap'
 import Push from '../button/button'
+import './style.css'
+
 class ProductsList extends Component {
 
   render(){
     return(
-        <Row md="12" style={{width: '100%', margin: 0, padding: 0}}>
+        <Row md="12" id="rowProducts">
           {this.props.products.map((item, i) => {
             return(
               <Col md="3" key={i}>

@@ -41,12 +41,12 @@ class Details extends Component {
 
         return(
             <Fragment>
-                <Row style={{width: '100%'}}>
+                <Row id="rowDetails">
                     <Col md="6">
-                        <img src={img} style={{width: '70%'}} alt=""/>
+                        <img src={img} id="imgDetails" alt=""/>
                     </Col>
                     <Col md="6">
-                        <Row style={{marginTop: '30%'}}>
+                        <Row id="rowDescProd">
                             <Col md="3">
                                 <b>Prodotto:</b>
                             </Col>

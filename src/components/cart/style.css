@@ -29,3 +29,16 @@
     position: fixed;
     margin-bottom: 25px;
 }
+
+#cartProductsRow{
+    width: 100%;
+    margin-top: 20px;
+}
+
+#colImgProd{
+    text-align: center;
+}
+
+#imgProd{
+    width: 150px;
+}

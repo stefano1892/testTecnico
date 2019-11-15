@@ -5,13 +5,12 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink
+  NavItem
  } from 'reactstrap';
 import {Link} from 'react-router-dom'
 
-// import NotificationBadge from 'react-notification-badge';
-// import {Effect} from 'react-notification-badge';
+import NotificationBadge from 'react-notification-badge';
+import {Effect} from 'react-notification-badge';
 
 const NavigationBar = (props) => {
 
@@ -19,6 +18,10 @@ const NavigationBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+
+  const {
+    arrLength
+  }= props
 
   return (
     <div>
@@ -28,16 +31,10 @@ const NavigationBar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem>
-            <NavItem>
               <div>
                 <Link to='/cart'>
                   <i className="fas fa-shopping-cart shoppingCart">
-                    {/*<NotificationBadge count={this.state.count} effect={Effect.SCALE}/>*/}
+                    <NotificationBadge count={arrLength.length} effect={Effect.SCALE}/>
                   </i>
                 </Link>
               </div>

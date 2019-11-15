@@ -1,4 +1,4 @@
-import { ADD_ELEMENT, REMOVE_ELEMENT } from '../constants'
+import { ADD_ELEMENT, REMOVE_ELEMENT, CLEAR_CART } from '../constants'
 
 const initialState = {
     products: [],
@@ -18,6 +18,12 @@ export default function ArrayReducer(state = initialState, action) {
                 ...state,
                 products: state.products.filter(( _, index ) => { return index !== action.payload }),
                 totPrice: state.totPrice - parseInt(state.products[action.payload].price)
+            }
+        case CLEAR_CART:
+            return {
+                ...state,
+                products: [],
+                totPrice: 0
             }
         default:
             return state
