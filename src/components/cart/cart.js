@@ -41,7 +41,7 @@ class CartComponent extends Component {
                         return(
                             <Row md="12" id="cartProductsRow" key={i}>
                                 <Col md="3" id="colImgProd">
-                                    <img src={item.img} alt="" id="imgProg" />
+                                    <img src={item.img} alt="" id="imgProd" />
                                 </Col>
                                 <Col md="9">
                                     <Row>

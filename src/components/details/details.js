@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Products from '../data/data.js';
 import { Row, Col }  from 'reactstrap'
 import Push from '../button/button.js';
+import './style.css'
 
 
 class Details extends Component {
